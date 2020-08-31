@@ -102,7 +102,7 @@ def test_compare_work():
 	# create work_fn1
 		# create work_fn2
 	
-	res = compare_work(work_fn1, work_fn2)
+	res = compare_work()
 	print_work_results(res)
 
 def compare_span(sizes=[10, 20, 50, 100, 1000, 5000, 10000]):

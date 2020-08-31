@@ -22,9 +22,9 @@ def simple_work_calc(n, a, b):
 
 def test_simple_work():
 	""" done. """
-	assert simple_work_calc(10, 2, 2) == #TODO
-	assert simple_work_calc(20, 3, 2) == #TODO
-	assert simple_work_calc(30, 4, 2) == #TODO
+	assert simple_work_calc(8, 2, 2) == 32
+	assert simple_work_calc(8, 3, 2) == 1  #TODO: fix
+	assert simple_work_calc(9, 2, 3) == 1  #TODO: fix
 
 def work_calc(n, a, b, f):
 	"""Compute the value of the recurrence $W(n) = aW(n/b) + f(n)
@@ -58,9 +58,9 @@ def span_calc(n, a, b, f):
 
 def test_work():
 	""" done. """
-	assert work_calc(10, 2, 2,lambda n: 1) == #TODO
-	assert work_calc(20, 1, 2, lambda n: n*n) == #TODO
-	assert work_calc(30, 3, 2, lambda n: n) == #TODO
+	assert work_calc(8, 2, 2,lambda n: n) == 32 
+	assert work_calc(8, 1, 2, lambda n: n*n) == 1 # TODO: fix
+	assert work_calc(8, 3, 2, lambda n: 1) == 1   # TODO: fix
 
 def compare_work(work_fn1, work_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000]):
 	"""
@@ -97,7 +97,7 @@ def print_span_results(results):
 							tablefmt="github"))
 def test_compare_work():
 	# curry work_calc to create multiple work
-	# functions taht can be passed to compare_work
+	# functions that can be passed to compare_work
     
 	# create work_fn1
 	# create work_fn2
@@ -105,7 +105,7 @@ def test_compare_work():
 	res = compare_work(work_fn1, work_fn2)
 	print_work_results(res)
 
-def compare_span(sizes=[10, 20, 50, 100, 1000, 5000, 10000]):
+def compare_span(span_fn1, span_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000]):
 	"""
 	Compare the values of different recurrences for 
 	given input sizes.
@@ -126,10 +126,10 @@ def compare_span(sizes=[10, 20, 50, 100, 1000, 5000, 10000]):
 	return result
 
 def test_compare_span():
-	assert span_calc(10, 2, 2,lambda n: 1) == #TODO
-	assert span_calc(20, 1, 4, lambda n: n*n) == #TODO
-	assert span_calc(30, 3, 4, lambda n: n) == #TODO
+	assert span_calc(10, 2, 2, lambda n: 1) == 1    # TODO: fix
+	assert span_calc(20, 1, 4, lambda n: n*n) == 1  #TODO: fix
+	assert span_calc(30, 3, 4, lambda n: n) == 1    #TODO: fix
 
-	res = compare_span()
+	## make span_fn1 and span_fn2
+	res = compare_span(span_fn1, span_fn2)
 	print_span_results(res)
-	pass

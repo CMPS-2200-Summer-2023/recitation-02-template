@@ -62,7 +62,7 @@ def test_work():
 	assert work_calc(20, 1, 2, lambda n: n*n) == #TODO
 	assert work_calc(30, 3, 2, lambda n: n) == #TODO
 
-def compare_work(sizes=[10, 20, 50, 100, 1000, 5000, 10000]):
+def compare_work(work_fn1, work_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000]):
 	"""
 	Compare the values of different recurrences for 
 	given input sizes.
@@ -100,9 +100,9 @@ def test_compare_work():
 	# functions taht can be passed to compare_work
     
 	# create work_fn1
-		# create work_fn2
+	# create work_fn2
 	
-	res = compare_work()
+	res = compare_work(work_fn1, work_fn2)
 	print_work_results(res)
 
 def compare_span(sizes=[10, 20, 50, 100, 1000, 5000, 10000]):

@@ -69,7 +69,7 @@ def compare_work(work_fn1, work_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
 
 	Returns:
 	A list of tuples of the form
-	(n, work_fn1(n), work_fn2(n), ...)
+	[(n, work_fn1(n), work_fn2(n)), ...)
 	
 	"""
 	result = []
@@ -112,7 +112,7 @@ def compare_span(span_fn1, span_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
 
 	Returns:
 	A list of tuples of the form
-	(n, work_fn1(n), work_fn2(n), ...)
+	[(n, span_fn1(n), span_fn2(n)), ...]
 	
 	"""
 	result = []

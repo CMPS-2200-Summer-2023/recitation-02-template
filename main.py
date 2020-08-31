@@ -67,6 +67,11 @@ def compare_work(work_fn1, work_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
 	Compare the values of different recurrences for 
 	given input sizes.
 
+	Params:
+	work_fn1....a curried version of work_calc expecting a single input n
+	work_fn2....a curried version of work_calc expecting a single input n
+	sizes.......list of values for n to compare these two work functions.
+
 	Returns:
 	A list of tuples of the form
 	[(n, work_fn1(n), work_fn2(n)), ...)
@@ -107,8 +112,13 @@ def test_compare_work():
 
 def compare_span(span_fn1, span_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000]):
 	"""
-	Compare the values of different recurrences for 
+	Compare the values of different span recurrences for 
 	given input sizes.
+
+	Params:
+	span_fn1....a curried version of span_calc expecting a single input n
+	span_fn2....a curried version of span_calc expecting a single input n
+	sizes.......list of values for n to compare these two span functions.
 
 	Returns:
 	A list of tuples of the form
@@ -117,7 +127,7 @@ def compare_span(span_fn1, span_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
 	"""
 	result = []
 	for n in sizes:
-		# compute W(n) using current a, b, f
+		# compute S(n) using current a, b, f
 		result.append((
 			n,
 			span_fn1,

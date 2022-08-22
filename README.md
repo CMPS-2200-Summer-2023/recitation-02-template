@@ -1,8 +1,5 @@
 # CMPS 2200  Recitation 02
 
-**Name (Team Member 1):**_________________________  
-**Name (Team Member 2):**_________________________
-
 In this recitation, we will investigate recurrences. 
 
 To complete this recitation, follow the instructions in [recitation-02.md](recitation-02.md) ([PDF version](recitation-02.pdf)). Below you'll find important and useful information about submitting your work, using git, and testing your code. 

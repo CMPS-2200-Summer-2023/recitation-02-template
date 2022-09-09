@@ -33,6 +33,6 @@ where $W(1) = 1$.
     **Enter your answer in answers.md**
 
 - [ ] 6. (3 points) $W(n)$ is meant to represent the running time of
-  some recursive algorithm. Suppose we always had $a$ processors available to us and we wanted to compute the span of the same algorithm. In other words, assume that we always have enough processors for every generated subproblem. Implement the function `span_calc` to compute the empirical span, where the work of the algorithm is given by $W(n)$. Implement `test_compare_span` to create a new comparison function for comparing span functions. Derive the asymptotic expressions for the span of the recurrences you used in problem 4 above. Confirm that everything matches up as it should. 
+  some recursive algorithm. In other words, assume that we always have enough processors for every generated subproblem. Implement the function `span_calc` to compute the empirical span, where the work of the algorithm is given by $W(n)$ and the span of the combine step is equal to the work of the combine step. Implement `test_compare_span` to create a new comparison function for comparing span functions. Derive the asymptotic expressions for the span of the recurrences you used in problem 4 above. Confirm that everything matches up as it should. 
 
     **Enter your answer in answers.md**
